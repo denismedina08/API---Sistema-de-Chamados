@@ -65,11 +65,8 @@ public class ChamadoController {
         return service.atualizarStatus(id, dto.status());
     }
 
-    @PatchMapping("/{id}/tecnico")
-    public ChamadoResponse atribuirTecnico(
-        @PathVariable Long id,
-        @Valid @RequestBody ChamadoTecnicoRequest dto
-    ) {
+    @PatchMapping("/{id}/atribuir")
+    public ChamadoResponse atribuirTecnico(@PathVariable Long id, @RequestBody ChamadoTecnicoRequest dto) {
         return service.atribuirTecnico(id, dto.tecnicoId());
     }
 
