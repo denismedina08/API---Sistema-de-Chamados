@@ -18,7 +18,7 @@ public class Categoria {
     @Column(nullable = false, length = 100)
     private String nome;
 
-    @Column(nullable = false, length = 500)
+    @Column(length = 255, nullable = true)
     private String descricao;
 
     public Categoria() {}
